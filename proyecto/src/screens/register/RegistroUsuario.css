@@ -1,0 +1,168 @@
+#root {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  background: linear-gradient(rgba(51, 52, 54, 0.75), rgba(129, 133, 141, 0.75)), url('../../imgs/fondo.jpg');
+  background-size: cover;
+}
+
+.container-form{
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+  max-width: 900px;
+  height: 600px;
+  margin: 10px;
+  transition: all 1s ease;
+}
+
+.information{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #F5F5F5;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.info-childs{
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info-childs h2{
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.info-childs p{
+  margin: 15px 0;
+  color: #000000;
+  font-size: 15px;
+}
+
+.info-childs input{
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 30px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: backgroud-color .3s ease;
+  margin-top: 20px;
+}
+
+.info-childs input:hover{
+  background-color: #9191bd;
+  border: none;
+  color: #fff;
+  box-shadow: center;
+  justify-content: center;
+  border: solid thin red;
+}
+
+.form-information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  background-color: #0F0F0F;
+  border-top-right-radius: 20px; 
+  border-bottom-right-radius: 20px;
+}
+
+.form-information-childs{
+  padding: 0 30px;
+}
+
+.form-information-childs h2{
+  color: #fff;
+  font-size: 2rem;
+}
+
+.form {
+  margin: 30px 0 0 0;
+}
+
+.form label{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  background-color: #fff;
+
+}
+
+.form label input{
+  width: 320px;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #333;
+}
+
+.form button{
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 15px 30px;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #000;
+  border: none;
+}
+
+.form button:hover{
+  background-color: #c7eef3;
+  color: #9191bd;
+  border: none;
+  color: #0a0909;
+  box-shadow: center;
+  justify-content: center;
+  border: solid thin red;
+}
+
+/* Agrega estilos CSS para el modal */
+
+.success-message{
+  color: #fff;
+  background-color: #9191bd;
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 20px;
+}
+
+.imagenlogo{
+  width: 200px;
+}
+
+
+/* resposive
+
+@media screen and (max-width:750) {
+  
+}
+
+@media screen and (max-width:580) {
+  .container-form {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .information{
+    width: 100%;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
+} */
