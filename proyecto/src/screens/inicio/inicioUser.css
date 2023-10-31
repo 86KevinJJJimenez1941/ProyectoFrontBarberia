@@ -1,0 +1,62 @@
+.contenedor {
+    display: flex;
+}
+
+.contenedor-izq {
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 540px;
+    background-color: aqua;
+}
+
+.contenedor-derc {
+    
+    justify-content: center;
+    text-align: center;
+    width: 550px;
+    height: 540px;
+    background-color: #000;
+}
+
+.imagen-fondo {
+    width: 220px;
+    margin-top: 60px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+h3{
+    font-size: 40px;
+}
+
+h2{
+    color: aqua;
+    margin-top: 70px;
+}
+
+.form{
+    margin-top: 65px;
+}
+
+
+
+.botones{
+    width: 200px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+label {
+    margin-left: 70px;
+    width: 400px;
+}
+
+.success-message{
+    margin-left: 70px;
+    width: 400px;
+}
