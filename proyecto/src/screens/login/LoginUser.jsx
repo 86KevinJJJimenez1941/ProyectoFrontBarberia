@@ -16,11 +16,8 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Realiza la lógica de inicio de sesión y verifica las credenciales
-      const response = await axios.post("http://localhost:3000/user/login", userData);
-      
+      const response = await axios.post("https://proyectobackbarberia-production.up.railway.app/user/login", userData);
       if (response.data.message) {
-        // Redirige al usuario a la página de inicio después del inicio de sesión exitoso
         navigate('/inicio');
       }
     } catch (error) {

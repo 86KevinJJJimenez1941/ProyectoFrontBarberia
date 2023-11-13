@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import "./inicioUser.css";
 import logo from '../../imgs/principal.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Inicio() {
   const [message, setMessage] = useState(null);
@@ -14,7 +15,7 @@ export default function Inicio() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/user/services/guardado", serviceData);
+      const response = await axios.post("https://proyectobackbarberia-production.up.railway.app/user/services/guardado", serviceData);
       setMessage("Registro de servicio exitoso");
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
@@ -37,9 +38,9 @@ export default function Inicio() {
         <h4>Fecha actual: {new Date().toDateString()}</h4>
       </div>
       <div className="contenedor-derc">
-        <h2>Registro de cortes</h2>
+        <h2 className='presentacion'>Registro de cortes</h2>
         <form className='form' onSubmit={handleSubmit}>
-          <label>
+          <label className='label'>
             <input
               type="text"
               placeholder='Numero de identificación'
@@ -48,7 +49,7 @@ export default function Inicio() {
               onChange={handleChange}
             />
           </label>
-          <label>
+          <label className='label'>
             <input
               type="text"
               placeholder='Tipo de servicio'
@@ -57,7 +58,7 @@ export default function Inicio() {
               onChange={handleChange}
             />
           </label>
-          <label className='botom'>
+          <label  className='label'>
             <input
               type="text"
               placeholder='Precio'
@@ -69,7 +70,9 @@ export default function Inicio() {
           <br />
           <br />
           <button className='botones' type="submit">Registrar</button>
-          <button className='botones' type="paso">Ver Registros</button>
+          <Link to="/estadisticas">
+          <button className='botones' type="submit">Estadisticas</button>
+          </Link> 
 
         </form>
         {message && (

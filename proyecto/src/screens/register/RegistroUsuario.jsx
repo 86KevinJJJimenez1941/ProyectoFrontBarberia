@@ -18,7 +18,7 @@ export default function RegistroUsuario() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/user", userData);
+      const response = await axios.post("https://proyectobackbarberia-production.up.railway.app/user", userData);
       setMessage("Usuario creado correctamente en la base de datos");
     } catch (error) {
       console.error("Error al enviar el formulario:", error);

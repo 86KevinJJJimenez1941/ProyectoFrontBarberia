@@ -1,0 +1,82 @@
+.contenedor-estadisticas {
+    display: flex;
+}
+
+.contenedor-izq-esta {
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 540px;
+    background-color: white;
+}
+
+.contenedor-derc-esta {
+    justify-content: center;
+    text-align: center;
+    width: 550px;
+    height: 540px;
+    background-color: #000;
+}
+
+.title{
+    font-size: 30px;
+    color: red;
+    margin-top: 70px;
+}
+
+.inputs{
+    padding: 7px;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.busqueda-boton{
+    margin: 5px 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    color: aqua;
+}
+
+.prueba{
+    border: 5px solid red;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    border-radius: 50%;
+}
+
+.resultado-cortes{
+    color: red;
+    font-size: 90px;
+    margin: 50px auto;
+}
+
+.input-busqueda{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.boton-busqueda{
+    margin-left: 3px;
+    height: 35px;
+    width: 70px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    
+}
+
+.boton-busqueda:hover{
+    color: red;
+    background-color: #fff;
+
+}
