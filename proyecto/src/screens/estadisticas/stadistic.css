@@ -80,3 +80,20 @@
     background-color: #fff;
 
 }
+
+.title-two{
+    color: white;
+    font-size: 33px;
+}
+
+.resultado-cortes-statisdic{
+    color: red;
+    font-size: 90px;
+    margin: 5px auto;
+}
+
+.result-statistics{
+    display: contents;
+    color: white;
+    float: left;
+}

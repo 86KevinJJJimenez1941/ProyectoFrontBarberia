@@ -4,14 +4,20 @@ import "./stadistic.css";
 
 export default function Estadisticas() {
   const [identificationNumber, setIdentificationNumber] = useState("");
-  const [result, setResult] = useState(0); 
+  const [result, setResult] = useState({ totalIdentificationNumbers: 0, totalPrice: 0 }); 
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://proyectobackbarberia-production.up.railway.app/user/services/count?identification_number=${identificationNumber}`);
-      setResult(response.data.count || 0);
+      const response = await axios.get(`https://proyectobackbarberia-production.up.railway.app/user/services/stats?identification_number=${identificationNumber}`);
+      console.log("Respuesta del servidor:", response.data);
+
+      // Desestructurar la respuesta para obtener las propiedades específicas
+      const { totalIdentificationNumbers, totalPrice } = response.data;
+      const discountedPrice = totalPrice - (totalPrice * 0.5);
+
+      setResult({ totalIdentificationNumbers, totalPrice, discountedPrice });
     } catch (error) {
-      setResult(0);
+      setResult({ totalIdentificationNumbers: 0, totalPrice: 0 });
       console.error("Error al realizar la consulta:", error);
     }
   };
@@ -19,7 +25,7 @@ export default function Estadisticas() {
   return (
     <div className="contenedor-estadisticas">
       <div className="contenedor-izq-esta">
-        <h3 className='title'>Estas son tus estadisticas barbero</h3>
+        <h3 className='title'>Estas son tus cortes barbero</h3>
         <input
           className='input-busqueda'
           type="text"
@@ -29,10 +35,17 @@ export default function Estadisticas() {
         />
         <button className='boton-busqueda' onClick={handleSearch}>Search</button>
         <div className='prueba'>
-          <p className='resultado-cortes'>{result}</p>
+          <p className='resultado-cortes'>{result.totalIdentificationNumbers}</p>
         </div>
       </div>
-      <div className="contenedor-derc-esta"></div>
+      <div className="contenedor-derc-esta">
+        <h3 className='title-two'>Acá encontrarás un resumen de lo que te estás ganando</h3>
+        <h1 className='result-statistics'>Te corresponde</h1>
+        <p className='resultado-cortes-statisdic'>${result.discountedPrice}</p>
+        <h1 className='result-statistics'>Total</h1>
+        <p className='resultado-cortes-statisdic'>${result.totalPrice}</p>
+        
+      </div>
     </div>
   );
 }
