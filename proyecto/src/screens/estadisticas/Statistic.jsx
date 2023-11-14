@@ -11,7 +11,6 @@ export default function Estadisticas() {
       const response = await axios.get(`https://proyectobackbarberia-production.up.railway.app/user/services/stats?identification_number=${identificationNumber}`);
       console.log("Respuesta del servidor:", response.data);
 
-      // Desestructurar la respuesta para obtener las propiedades específicas
       const { totalIdentificationNumbers, totalPrice } = response.data;
       const discountedPrice = totalPrice - (totalPrice * 0.5);
 
