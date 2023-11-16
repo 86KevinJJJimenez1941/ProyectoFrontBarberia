@@ -7,11 +7,11 @@ WORKDIR /app/proyecto
 # Copia el package.json y package-lock.json a /app/proyecto
 COPY proyecto/package.json 
 
+# Copia el resto de la aplicación
+COPY proyecto/ 
 # Instala las dependencias
 RUN npm install
 
-# Copia el resto de la aplicación
-COPY proyecto/ 
 
 # Compila la aplicación
 RUN npm run build
