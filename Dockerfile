@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Establece el directorio de trabajo en /app
-WORKDIR /app
+WORKDIR /app/proyecto
 
 # Copia el package.json y package-lock.json a /app/proyecto
 COPY proyecto/package.json 
